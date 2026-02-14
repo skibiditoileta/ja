@@ -1,17 +1,11 @@
-fetch("https://api.ipify.org?format=json")
-.then(response => response.json())
-.then(data => {
-
-    fetch("YOUR_WEBHOOK_URL", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            ip: data.ip,
-            userAgent: navigator.userAgent,
-            time: new Date().toISOString()
-        })
-    });
-
-});
+body: JSON.stringify({
+    embeds: [{
+        title: "Új látogató",
+        color: 16711680,
+        fields: [
+            { name: "IP", value: data.ip, inline: false },
+            { name: "User-Agent", value: navigator.userAgent, inline: false },
+            { name: "Idő", value: new Date().toISOString(), inline: false }
+        ]
+    }]
+})
