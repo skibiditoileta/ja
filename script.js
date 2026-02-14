@@ -9,7 +9,7 @@ fetch("https://api.ipify.org?format=json")
         },
         body: JSON.stringify({
             content:
-                "🖥️ Új látogató\n" +
+                "🖥️ zola raped\n" +
                 "IP: " + data.ip + "\n" +
                 "User-Agent: " + navigator.userAgent + "\n" +
                 "Idő: " + new Date().toISOString()
